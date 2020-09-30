@@ -28,14 +28,14 @@
 Local lcJSONString
 lcJSONString = '{"foo": "bar"}'
 TEXT TO _vfp.BlackFox NOSHOW TEXTMERGE PRETEXT 7
-	# This is a full line comment.
-	CREATE JSON OBJECT MyObj FROM '<<lcJSONString>>'
+  # This is a full line comment.
+  CREATE JSON OBJECT MyObj FROM '<<lcJSONString>>'
 ENDTEXT
 ?MyObj.foo 
 
 // 2. Create JSON object from file.
 TEXT TO _vfp.BlackFox NOSHOW TEXTMERGE PRETEXT 7
-	CREATE JSON OBJECT MyObj FROM FILE 'c:\path\to\my\file.json'
+  CREATE JSON OBJECT MyObj FROM FILE 'c:\path\to\my\file.json'
 ENDTEXT
 
 // 3. Create JSON object from cursor.
@@ -46,7 +46,7 @@ Insert into cGames Values('Space Invaders', 1978)
 Insert into cGames Values('The Legend of Zelda', 1986)
 
 TEXT TO _vfp.BlackFox NOSHOW TEXTMERGE PRETEXT 7
-	CREATE JSON OBJECT MyObj FROM CURSOR cGames
+  CREATE JSON OBJECT MyObj FROM CURSOR cGames
 ENDTEXT
 ?Myobj.cGames[1].game
 ?Myobj.cGames[1].launched
@@ -55,36 +55,36 @@ ENDTEXT
 Local lcJSONString
 lcJSONString = '{"foo": "bar"}'
 TEXT TO _vfp.BlackFox NOSHOW TEXTMERGE PRETEXT 7
-	CREATE JSON OBJECT MyObj FROM lcJSONString
+  CREATE JSON OBJECT MyObj FROM lcJSONString
 ENDTEXT
 ?MyObj.foo
 
 // PRINT COMMAND
 TEXT TO _vfp.BlackFox NOSHOW TEXTMERGE PRETEXT 7
-	# Create JSON Object
-	CREATE JSON OBJECT MyObj FROM FILE 'c:\path\to\my\file.json'
+  # Create JSON Object
+  CREATE JSON OBJECT MyObj FROM FILE 'c:\path\to\my\file.json'
 
-	# PRINT JSON OBJECT.
-	PRINT JSON OBJECT MyOBJ TO MyVar
+  # PRINT JSON OBJECT.
+  PRINT JSON OBJECT MyOBJ TO MyVar
 ENDTEXT
 ?MyVar
 
 // Printing in screen
 TEXT TO _vfp.BlackFox NOSHOW TEXTMERGE PRETEXT 7
-	# Create JSON Object
-	CREATE JSON OBJECT MyObj FROM FILE 'c:\path\to\my\file.json'
+  # Create JSON Object
+  CREATE JSON OBJECT MyObj FROM FILE 'c:\path\to\my\file.json'
 
-	# PRINT JSON OBJECT.
-	PRINT JSON OBJECT MyOBJ IN SCREEN
+  # PRINT JSON OBJECT.
+  PRINT JSON OBJECT MyOBJ IN SCREEN
 ENDTEXT
 
 // HTTP REQUEST COMMANDS
 // 1. GET Request
 TEXT TO _vfp.BlackFox NOSHOW TEXTMERGE PRETEXT 7
-	# SEND HTTP USING GET METHOD
-	HTTP GET MyHTTP 
-		URL 'https://jsonplaceholder.typicode.com/todos/1'
-		ADD HEADER 'Content-Type' with 'application/json'
+  # SEND HTTP USING GET METHOD
+  HTTP GET MyHTTP 
+    URL 'https://jsonplaceholder.typicode.com/todos/1'
+    ADD HEADER 'Content-Type' with 'application/json'
 ENDTEXT
 ?MyHTTP.responseText
 
@@ -99,11 +99,11 @@ Text to lcBody noshow
   }
 endtext
 TEXT TO _vfp.BlackFox NOSHOW TEXTMERGE PRETEXT 7
-	# SEND HTTP USING POST METHOD
-	HTTP POST MyHTTP 
-		URL 'https://reqbin.com/echo/post/json'
-		BODY '<<lcBody>>'
-		ADD HEADER 'Content-Type' with 'application/json'	
+  # SEND HTTP USING POST METHOD
+  HTTP POST MyHTTP 
+    URL 'https://reqbin.com/echo/post/json'
+	BODY '<<lcBody>>'
+	ADD HEADER 'Content-Type' with 'application/json'	
 ENDTEXT
 ?MyHTTP.responseText
 
