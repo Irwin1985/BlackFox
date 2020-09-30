@@ -122,4 +122,4 @@ ENDTEXT
 
 ## License
 
-`JSONFox` is released under the MIT Licence.
+`BlackFox` is released under the MIT Licence.
