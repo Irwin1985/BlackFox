@@ -23,8 +23,8 @@
 ```xBase
  Do LocFile("BlackFox", "app")
 
-* JSON Examples 
-* 1. Create JSON object from String literal.
+// JSON Examples 
+// 1. Create JSON object from String literal.
 Local lcJSONString
 lcJSONString = '{"foo": "bar"}'
 TEXT TO _vfp.BlackFox NOSHOW TEXTMERGE PRETEXT 7
@@ -33,12 +33,12 @@ TEXT TO _vfp.BlackFox NOSHOW TEXTMERGE PRETEXT 7
 ENDTEXT
 ?MyObj.foo 
 
-* 2. Create JSON object from file.
+// 2. Create JSON object from file.
 TEXT TO _vfp.BlackFox NOSHOW TEXTMERGE PRETEXT 7
 	CREATE JSON OBJECT MyObj FROM FILE 'c:\path\to\my\file.json'
 ENDTEXT
 
-* 3. Create JSON object from cursor.
+// 3. Create JSON object from cursor.
 Create Cursor cGames (game c(25), launched i(4))
 Insert into cGames Values('Pac-Man', 1980)
 Insert into cGames Values('Super Mario Bros', 1985)
@@ -51,7 +51,7 @@ ENDTEXT
 ?Myobj.cGames[1].game
 ?Myobj.cGames[1].launched
 
-* 4. Create JSON object from variable.
+// 4. Create JSON object from variable.
 Local lcJSONString
 lcJSONString = '{"foo": "bar"}'
 TEXT TO _vfp.BlackFox NOSHOW TEXTMERGE PRETEXT 7
@@ -59,7 +59,7 @@ TEXT TO _vfp.BlackFox NOSHOW TEXTMERGE PRETEXT 7
 ENDTEXT
 ?MyObj.foo
 
-* PRINT COMMAND
+// PRINT COMMAND
 TEXT TO _vfp.BlackFox NOSHOW TEXTMERGE PRETEXT 7
 	# Create JSON Object
 	CREATE JSON OBJECT MyObj FROM FILE 'c:\path\to\my\file.json'
@@ -69,7 +69,7 @@ TEXT TO _vfp.BlackFox NOSHOW TEXTMERGE PRETEXT 7
 ENDTEXT
 ?MyVar
 
-* Printing in screen
+// Printing in screen
 TEXT TO _vfp.BlackFox NOSHOW TEXTMERGE PRETEXT 7
 	# Create JSON Object
 	CREATE JSON OBJECT MyObj FROM FILE 'c:\path\to\my\file.json'
@@ -78,8 +78,8 @@ TEXT TO _vfp.BlackFox NOSHOW TEXTMERGE PRETEXT 7
 	PRINT JSON OBJECT MyOBJ IN SCREEN
 ENDTEXT
 
-* HTTP REQUEST COMMANDS
-* 1. GET Request
+// HTTP REQUEST COMMANDS
+// 1. GET Request
 TEXT TO _vfp.BlackFox NOSHOW TEXTMERGE PRETEXT 7
 	# SEND HTTP USING GET METHOD
 	HTTP GET MyHTTP 
@@ -88,7 +88,7 @@ TEXT TO _vfp.BlackFox NOSHOW TEXTMERGE PRETEXT 7
 ENDTEXT
 ?MyHTTP.responseText
 
-* 2. POST Request
+// 2. POST Request
 Local lcBody
 Text to lcBody noshow
   {
