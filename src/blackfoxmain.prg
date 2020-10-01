@@ -1,13 +1,10 @@
 *========================================================================*
 * BlackFox Main Program
 *========================================================================*
-Clear
 
-* Test
-Cd c:\desarrollo\mygarbage\vfp\BlackFox\src
 Set Path To "Src" Additive
 Set Path To "..\Bin" Additive
-* Test
+
 Set Procedure To 'blackfoxTokenizer' Additive
 Set Procedure To 'blackfoxParser' Additive
 Set Procedure To 'blackfoxInterpreter' Additive
