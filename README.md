@@ -2,6 +2,11 @@
 
 **BlackFox** is a tiny Visual FoxPro like grammar that abstracts some verbose code for modern language constructs like JSON notation, HTTP protocol and so forth.
 
+Si te gusta mi trabajo puedes apoyarme con un donativo:   
+[![DONATE!](http://www.pngall.com/wp-content/uploads/2016/05/PayPal-Donate-Button-PNG-File-180x100.png)](https://www.paypal.com/donate/?hosted_button_id=LXQYXFP77AD2G) 
+
+    Gracias por tu apoyo!
+
 ### Project Manager
 
 **Irwin Rodríguez** (Toledo, Spain)
